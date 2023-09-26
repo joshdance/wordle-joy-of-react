@@ -24,7 +24,7 @@ function ResultBanner({ numberOfGuess, gameStatus, answer }) {
           <button className="modal-close-btn" onClick={hideBanner}>Close X</button>
         </div>
       ) : (
-        <div className="sad banner">
+        <div className={`sad banner ${modalStatus !== 'dismissed' ? null : 'visually-hidden'}`}>
           <p>
             Sorry, the correct answer is <strong>{answer}</strong>.
           </p>
